@@ -1,0 +1,392 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-style: arial;
+}
+.nav {
+  width: 100%;
+  background-color: black;
+  height: 18vh;
+  display: flex;
+  align-items: center;
+  font-style: roboto slab;
+}
+
+.nav p {
+  font-size: 3rem;
+  font-weight: 700;
+  color: whitesmoke;
+}
+.panel {
+  max-width: 85vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 5px;
+  height: 8vh;
+}
+.panel_ops {
+  display: flex;
+  flex-direction: row;
+}
+.search-bar {
+  display: flex;
+  flex-direction: row;
+  width: 10vw;
+}
+#search-text {
+  height: 8vh;
+  width: 15vw;
+  border: none;
+}
+.search-button {
+  background-color: white;
+  color: black;
+  border: none;
+  font-size: 1.4rem;
+}
+.panel_ops p {
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 20px 5px;
+  margin: 0 5px;
+}
+.panel_ops p:hover {
+  background-color: black;
+  color: white;
+}
+.search-button:hover {
+  background-color: black;
+  color: white;
+}
+.headline, .headline2, .headline3, .headline4 {
+    transition: text-shadow 0.3s ease;
+}
+
+.headline:hover,
+.headline2:hover,
+.headline3:hover,
+.headline4:hover {
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+}
+
+.latest {
+  height: 5vh;
+  background-color: #d5d5d5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.details {
+  display: flex;
+}
+.tog {
+  margin: 0 70px;
+  display: flex;
+}
+.fa-solid {
+  margin: 0 5px;
+}
+.featured {
+  
+  display: flex;
+  width: 75%;
+  position: absolute;
+  height: 65%;
+}
+.box1 {
+  height: 56vh;
+  width: 26vw;
+  background-color: red;
+  position: relative;
+  top: 55px;
+  left: 37px;
+  border-radius: 2%;
+
+  color: black;
+}
+.tags{
+    display: flex;
+    position: relative;
+    bottom: 48%;
+}
+.tags p:hover
+{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.tags p{
+    padding: 2px 4px;
+    color: white;
+    height: 22px;
+    width: 71px;
+    background-color: rgb(0 0 0);
+    border-radius: 37%;
+    text-align: center;
+    margin: 0 8px;
+}
+
+.headline{
+    position: relative;
+    bottom: 40%;
+    color: white;
+    font-size: 2.3rem;
+    font-weight: 700;
+}
+.bottom{
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    position: relative;
+    bottom: 37%;
+    left: -4%;
+}
+
+.dates{
+    display: flex;
+    padding: 2px;
+}
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  filter: brightness(70%) contrast(120%);
+}
+
+.box2 {
+  background-color: blue;
+  position: relative;
+  width: 20vw;
+  height: 56vh;
+  top: 55px;
+  left: 80px;
+  border-radius: 2%;
+}
+
+
+.headline2{
+    position: relative;
+    bottom: 40%;
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+.bottom2{
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    position: relative;
+    bottom: 33%;
+    left: -4%;
+}
+
+
+.box3 {
+    background-color: green;
+    height: 26vh;
+    width: 18vw;
+    position:relative;
+    top: 11%;
+    left: 12%;
+    /* overflow: hidden; */
+    border-radius: 2%;
+  }
+  .headline3{
+    position: relative;
+    bottom: 41%;
+    font-size: 0.9rem;
+    color: white;
+    font-weight: 200;
+  }
+  
+  .box4 {
+    height: 26vh;
+    width: 18vw;
+    position: relative;
+    top: 55%;
+    left: -10%;
+    /* overflow: hidden; */
+    border-radius: 2%;
+  }
+  main{
+    display: flex;
+   
+  }
+
+  .not_featured{
+  
+    width: 25%;
+    height: 65vh;
+    position: relative;
+    left: 75%;
+  }
+  .top{
+   justify-content: center;
+   overflow: hidden;
+  
+  }
+
+  .top p{
+    padding: 5% 10%;
+  }
+  .card{
+    display: flex;
+    height: 15vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+.content{
+    display: flex;
+    flex-direction: column;
+
+    font-size: 1.2rem;
+    font-weight: 550;
+}
+.card img{
+    height: 56%;
+    width: 23%;
+    border-radius: 7%;
+    margin: 0 2%;
+}
+.card:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.list{
+    overflow-y: scroll;
+    height: 55vh;
+}
+.box1,
+.box2,
+.box3,
+.box4 {
+  transition: transform 0.3s ease;
+}
+
+.box1:hover,
+.box2:hover,
+.box3:hover,
+.box4:hover {
+  transform: scale(1.1); 
+}
+.card img {
+    transition: transform 0.3s ease; 
+  }
+  
+  .card:hover img {
+    transform: scale(1.1); 
+  }
+  @keyframes boltAnimation {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .fa-bolt {
+    animation: boltAnimation 1s infinite; 
+  }
+  
+  
+  @keyframes weatherAnimation {
+    0% {
+      transform: scale(1) rotate(0deg);
+    }
+    50% {
+      transform: scale(1.2) rotate(-5deg);
+    }
+    100% {
+      transform: scale(1) rotate(0deg);
+    }
+  }
+  
+  .fa-cloud-moon-rain {
+    animation: weatherAnimation 3s ease-in-out infinite; /* Apply the animation to the weather icon */
+  }
+  /*media queries*/
+
+  @media (max-width:950px){
+    .search-bar{
+        display: none;
+    }
+  }
+  @media (max-width:900px) {
+    .nav{
+        width: 130%;
+    }
+    .featured{
+       display: flex;
+       flex-direction: column;
+       align-self: center;
+       max-width: 60%;
+       
+    }
+    .featured >*{
+        height: 40vh;
+        width: 40vw;
+        position: static;
+        
+        margin: 4% 14%;
+
+    } 
+   .not_featured{
+    width: 50%;
+   }
+   .list{
+    height: 100vh;
+   }
+
+   
+  }
+  @media (max-width:590px) {
+    .next{
+        flex-wrap: wrap;
+       width: 100%;
+    }
+    .next p{
+        padding: 5px;
+        
+    }
+    .latest{
+        display: none;
+    }
+  }
+  @media (max-width:500px) {
+    .featured *{
+        font-size: 80%;
+    }
+    .next{
+        display: none;
+    }
+    .panel{
+        margin: -20px;
+    }
+    .tags p{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+  }
+  @media (max-width:430px) {
+    .not_featured *{
+      font-size: 90%;
+  }
+  .card img{
+    object-fit: contain;
+  }
+  .top p{
+    font-size: 80%;
+  }
+  }
