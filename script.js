@@ -1,4 +1,26 @@
-
+function attachClickListener(toggleButton) {
+  console.log(toggleButton);
+  toggleButton.addEventListener("click", function () {
+    const contentBoxTemplate = document.getElementById("contentBoxTemplate");
+    if (contentBoxTemplate) {
+      const contentBox = document
+        .importNode(contentBoxTemplate.content, true)
+        .querySelector(".content-box");
+      this.parentNode.appendChild(contentBox);
+      if (
+        contentBox.style.display === "none" ||
+        contentBox.style.display === ""
+      ) {
+        contentBox.style.display = "block";
+        console.log(contentBox.innerHTML);
+        console.log("IM on");
+      } else {
+        contentBox.style.display = "none";
+        console.log("IM off");
+      }
+    }
+  });
+}
 async function getFirstElementFromAPI(url) {
   try {
     let response = await fetch(url);
