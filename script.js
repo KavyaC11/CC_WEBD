@@ -1,26 +1,3 @@
-function attachClickListener(toggleButton) {
-  console.log(toggleButton);
-  toggleButton.addEventListener("click", function () {
-    const contentBoxTemplate = document.getElementById("contentBoxTemplate");
-    if (contentBoxTemplate) {
-      const contentBox = document
-        .importNode(contentBoxTemplate.content, true)
-        .querySelector(".content-box");
-      this.parentNode.appendChild(contentBox);
-      if (
-        contentBox.style.display === "none" ||
-        contentBox.style.display === ""
-      ) {
-        contentBox.style.display = "block";
-        console.log(contentBox.innerHTML);
-        console.log("IM on");
-      } else {
-        contentBox.style.display = "none";
-        console.log("IM off");
-      }
-    }
-  });
-}
 async function getFirstElementFromAPI(url) {
   try {
     let response = await fetch(url);
@@ -121,7 +98,6 @@ gettElementFromAPI(apiEndpoint).then((tElement) => {
   console.log("tElement:", tElement);
 
   bindData3(tElement);
-  document.addEventListener("DOMContentLoaded", attachClickListener);
 });
 
 function bindData3(articles) {
@@ -160,7 +136,6 @@ getfElementFromAPI(apiEndpoint).then((fElement) => {
   console.log("fElement:", fElement);
 
   bindData4(fElement);
-  document.addEventListener("DOMContentLoaded", attachClickListener);
 });
 
 function bindData4(articles) {
@@ -183,7 +158,6 @@ function fillData(card, articles) {
   newshead.innerHTML = `${articles.headline.slice(0, 25)}...`;
   newsAuth.innerHTML = articles.author;
   newsdate.innerHTML = articles.date;
-  card.firstElementChild.addEventListener("click", attachClickListener);
 }
 
 async function FromAPI(url) {
@@ -224,7 +198,6 @@ function bindData(articles) {
     cont.appendChild(clone);
   });
 }
-
 function fillData2(card, articles) {
   const newsImg = card.querySelector("#newsimg");
 
@@ -240,16 +213,17 @@ function fillData2(card, articles) {
   <p id="datedata" >${articles.date}</p>`;
   console.log(newsdate);
   let c = 0;
+  let pointer = null;
   card.firstElementChild.addEventListener("click", () => {
     c++;
 
-    let pointer = null;
+   
     console.log(c);
     console.log(headl);
 
-    if (c % 2 != 0) {
+    if (c % 2 !== 0) {
       console.log("now");
-      if (headl.innerText === articles.headline) {
+      if (pointer===null && headl.innerText === articles.headline) {
         const content = document.createElement("div");
         content.textContent = articles.content;
         document.body.appendChild(content);
@@ -265,9 +239,12 @@ function fillData2(card, articles) {
         content.style.borderRadius = "5px";
         pointer = content;
       }
-    } else {
-      if (pointer) {
+    }
+    else {
+      
+      if (pointer !== null) {
         pointer.remove();
+        pointer = null; 
       }
     }
   });
